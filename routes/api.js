@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Project = require('../models/Project');
-const Skill = require('../models/Skill');
+const Project = require('../models/project');
+const Skill = require('../models/skill');
 
 // API endpoint for projects
 router.get('/projects', async (req, res) => {
