@@ -1,0 +1,24 @@
+extends ../layout.pug
+
+block content
+  h1 Add New Project
+  
+  form(action="/admin/projects" method="POST")
+    div
+      label(for="title") Title:
+      input(type="text" id="title" name="title" required)
+      
+    div
+      label(for="description") Description:
+      textarea(id="description" name="description" rows="4" required)
+      
+    div
+      label(for="image") Image URL:
+      input(type="url" id="image" name="image" placeholder="https://example.com/image.jpg")
+      
+    div
+      label(for="link") Project Link:
+      input(type="url" id="link" name="link" placeholder="https://example.com/project")
+      
+    div
+      button(type="submit") Save Project

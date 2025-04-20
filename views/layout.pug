@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Portfolio Admin
+    link(rel='stylesheet', href='/style.css') 
+  body
+    nav
+      ul
+        li: a(href="/admin/index") Admin Home
+        //- Added link to the new portfolio page
+        li: a(href="/admin/portfolio") View Portfolio 
+        li: a(href="/admin/projects/new") Add Project
+        li: a(href="/admin/skills/new") Add Skill
+        
+    div.container 
+      block content

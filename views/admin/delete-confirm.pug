@@ -1,0 +1,14 @@
+extends ../layout.pug
+
+block content
+  h1 Confirm Deletion
+
+  p Are you sure you want to delete the #{itemType}: 
+    strong #{itemName}
+    | ?
+
+
+  form(action=deleteUrl method="POST")
+    div(style="margin-top: 20px;")
+      a(href="/admin/portfolio" style="margin-right: 15px;") Cancel
+      button(type="submit" style="background-color: red;") Confirm Delete

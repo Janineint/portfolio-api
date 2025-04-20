@@ -1,0 +1,99 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  background-color: #4a5568;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li a:hover {
+   background-color: #2d3748;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="url"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #5a67d8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #434190;
+}
+
+h1, h2 {
+   color: #2d3748;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  nav ul {
+     flex-direction: column;
+  }
+
+  nav ul li a {
+    text-align: center;
+  }
+}
+
+/* Example Bootstrap Overrides if you were using it */
+/*
+:root {
+  --bs-primary: #5a67d8;
+  --bs-secondary: #a0aec0;
+  --bs-body-font-family: 'Lato', sans-serif;
+}
+
+.btn-primary {
+   border-radius: 0;
+}
+.navbar {
+   background-color: #2d3748 !important;
+}
+*/

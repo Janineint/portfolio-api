@@ -1,0 +1,33 @@
+extends ../layout.pug
+
+block content
+  h1 Portfolio Content
+
+  h2 Projects
+  if projects && projects.length > 0
+    ul(style="list-style: none; padding: 0;") 
+      each project in projects
+        li(style="border: 1px solid #eee; margin-bottom: 20px; padding: 15px;")
+          if project.image
+            img(src=project.image, alt=project.title, style="max-width: 200px; height: auto; display: block; margin-bottom: 10px;")
+          
+          h3 #{project.title}
+          
+          p #{project.description}
+          
+          a(href=`/admin/project/${project._id}/delete` style="color: red;") [Delete Project]
+  else
+    p No projects found.
+
+  hr(style="margin: 20px 0;")
+
+  h2 Skills
+  if skills && skills.length > 0
+    ul
+      each skill in skills
+        li 
+          strong #{skill.name} 
+          | (#{skill.level})
+          a(href=`/admin/skill/${skill._id}/delete` style="margin-left: 10px; color: red;") [Delete]
+  else
+    p No skills found.
